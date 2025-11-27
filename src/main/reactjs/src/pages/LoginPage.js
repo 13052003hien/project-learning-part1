@@ -30,8 +30,16 @@ function LoginPage() {
             if (response.data.success) {
                 // Lưu thông tin user
                 authApi.setCurrentUser(response.data.user);
-                alert(response.data.message);
-                navigate('/home');
+                
+                // Kiểm tra role và chuyển hướng
+                const user = response.data.user;
+                const isAdmin = user.roles?.some(role => role.name === 'ROLE_ADMIN');
+                
+                if (isAdmin) {
+                    navigate('/admin/dashboard');
+                } else {
+                    navigate('/dashboard');
+                }
             } else {
                 setError(response.data.message);
             }

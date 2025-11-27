@@ -1,0 +1,236 @@
+/* Dashboard.css - Styles cho trang Dashboard */
+
+.dashboard-container {
+    min-height: 100vh;
+    background: #f5f7fa;
+}
+
+.dashboard-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.welcome-section {
+    margin-bottom: 2rem;
+}
+
+.welcome-section h2 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+    color: #333;
+}
+
+.welcome-section p {
+    color: #666;
+    margin: 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.dashboard-section {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+/* Transactions */
+.transactions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.transaction-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.transaction-icon {
+    font-size: 2rem;
+}
+
+.transaction-details {
+    flex: 1;
+}
+
+.transaction-desc {
+    margin: 0 0 0.3rem 0;
+    font-weight: 600;
+    color: #333;
+}
+
+.transaction-date {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.transaction-amount {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.transaction-amount.income {
+    color: #51CF66;
+}
+
+.transaction-amount.expense {
+    color: #FF6B6B;
+}
+
+/* Wallets */
+.wallets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.wallet-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.wallet-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.wallet-info {
+    flex: 1;
+}
+
+.wallet-name {
+    margin: 0 0 0.3rem 0;
+    font-weight: 600;
+    color: #333;
+}
+
+.wallet-balance {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #667eea;
+    font-weight: 700;
+}
+
+/* Quick Actions */
+.quick-actions {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.quick-actions h3 {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.3rem;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.action-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.action-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.action-icon {
+    font-size: 2.5rem;
+}
+
+.action-title {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Data Table */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+}
+
+.data-table tr:hover {
+    background: #f8f9fa;
+}
+
+.users-table-container {
+    overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header-nav {
+        display: none;
+    }
+}

@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const API_URL = '/api/auth';
+const API_URL = 'http://localhost:8080/api/auth';
+
+// Cấu hình axios để gửi credentials
+axios.defaults.withCredentials = true;
 
 const authApi = {
     register: (userData) => axios.post(`${API_URL}/register`, userData),

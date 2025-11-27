@@ -90,9 +90,10 @@ public class AuthController {
             }
 
             user.setPassword(null); // Không trả về password
-            return ResponseEntity.ok(
-                new AuthResponse("Đăng nhập thành công!", user, true)
-            );
+            
+            AuthResponse response = new AuthResponse("Đăng nhập thành công!", user, true);
+            
+            return ResponseEntity.ok(response);
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
